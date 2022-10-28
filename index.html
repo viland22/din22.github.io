@@ -1,444 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test aja</title>
-    <link rel="stylesheet" href="sass/bootstrap.min.css">
-    <link rel="stylesheet" href="sass/aos.css">
-    <link rel="stylesheet" href="sass/header.css">
-    <link rel="stylesheet" href="sass/slick-theme.css">
-    <link rel="stylesheet" href="sass/slick.css">
-    <link rel="stylesheet" href="sass/flaticon.css">
-    <link rel="stylesheet" href="sass/font-awesome.css">
-    <link rel="stylesheet" href="sass/style.css">
-</head>
-<body>
-
-    <main>
-        <header>
-            <nav
-                class="navbar-new navbar navbar-light navbar-expand-md bg-faded
-                justify-content-center align-items-center">
-                <div class="bg-blur"></div>
-                <div class="container">
-                <div class="logo logo-header">
-                    <a href="#" class="navbar-brand ">
-                    <!-- <span class="color-white">Raja Ampatku</span> -->
-                    <img src="img/detikcom.png" alt="detikcom" title="detikcom">
-                    </a>
-                </div>
-                <button
-                    class="navbar-toggler collapsed"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </button>
-                <div
-                    class="navbar-collapse collapse w-100 ml-auto                     align-items-center"
-                    id="navbarCollapse">
-                    <ul class="navbar-nav w-100 justify-content-center initial_">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link active goto" href="/">Beranda</a>
-                    </li> -->
-                    </ul>
-                    <div class="bottom-copy">
-                    &copy; 2022 detiknetworks All rights reserved
-                    </div>
-                    <ul class="nav navbar-nav ml-auto justify-content-end w-top">
-                    <li class="nav-item isdesktop">
-                        <a target="_blank"
-                        class="btn btn-third"
-                        href="#">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-                        Login
-                    </a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-            </nav>
-            </header>
-        <div class="preloader">
-            <div class="waiting">
-                <img
-                src="img/detikcom.png"
-                alt="detikX"
-                title="detikX"
-                loading="lazy"
-                class="animate"
-                />
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Link menu</title>
+    <style>
+        body {
+            font-family: 'Poppins';font-size: 9pt;
+        }
+        .header {
+            top:0;
+            display: flex;
+            justify-content: end;
+            padding:10px
+        }
+        .btn-round {
+            border-radius: 25px;
+        }
+        .brandimg {
+            height: 170px;
+            width: 170px;
+            border-radius: 50%;
+            border: 1px solid #06060630;
+        }
+        .brandname {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .list {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding:10px;
+           
+        }
+        .menu>img {
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+           
+        }
+        .menu>label {
+           margin-top: 5px;
+            font-weight: 500;
+        }
+    </style>
+  </head>
+  <body class="bg-light text-dark">
+   
+    <div class="container">
+        <div class="header">
+            <button class="btn btn-sm btn-round btn-dark text-light shadow-sm" id="btn-darklight"><i class="far fa-moon"></i></button>
+        </div>
+        <div class="content">
+            <div class="d-flex justify-content-center mt-5">
+                <img src="img/icon/logo.png" alt="" class="brandimg shadow-sm">
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+                <label class="brandname text-center">Cimanggoe Cafe</label>
+            </div>
+            <div class="d-flex justify-content-center">
+                <span>Jl. Cimanggu Besar No 13, Kota Bogor.</span>
             </div>
         </div>
-        <section class="hero">
-            <div class="hero__banner">
-                <div class="image">
-                    <picture>
-                        <source media="(max-width:766px)" srcset="img/hero/1-mob.jpg">
-                        <img src="img/hero/1.png" alt="Flowers">
-                      </picture>
+        <div class="list">
+            <div class="row mb-3">
+                <div class="col-3">
+                                     
                 </div>
-                <div class="image">
-                    <picture>
-                        <source media="(max-width:766px)" srcset="img/hero/2-mob.jpg">
-                        <img src="img/hero/2.png" alt="Flowers">
-                      </picture>
-                </div>
-                <div class="image">
-                    <picture>
-                        <source media="(max-width:766px)" srcset="img/hero/3-mob.jpg">
-                        <img src="img/hero/3.png" alt="Flowers">
-                      </picture>
-                </div>
-                <div class="image">
-                    <picture>
-                        <source media="(max-width:766px)" srcset="img/hero/4-mob.jpg">
-                        <img src="img/hero/4.png" alt="Flowers">
-                      </picture>
-                </div>
-                <div class="image">
-                    <picture>
-                        <source media="(max-width:766px)" srcset="img/hero/5-mob.jpg">
-                        <img src="img/hero/5.png" alt="Flowers">
-                      </picture>
-                </div>
-                <div class="image">
-                    <picture>
-                        <source media="(max-width:766px)" srcset="img/hero/6-mob.jpg">
-                        <img src="img/hero/6.png" alt="Flowers">
-                      </picture>
-                </div>
-                <div class="image">
-                    <picture>
-                        <source media="(max-width:766px)" srcset="img/hero/7-mob.jpg">
-                        <img src="img/hero/7.png" alt="name">
-                      </picture>
-                </div>
-            </div>
-            <div class="scroll-todown">
-                <i class="fa fa-angle-down"></i>
-                <div>Scroll ke Bawah</div>
-            </div>
-        </section>
-        <section class="usp">
-            
-            <div class="container">
-                <div class="text-center">
-                    <h2 data-aos="zoom-in"> e-learning detikcom</h2>
-                    <p>Pilih topik yang menarik buat kamu</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <div class="position-relative" data-aos="zoom-in">
-                            <div class="usp__animate one">
-                                <img src="img/icon/1.png" alt="" title="" loading="lazy">
-                            </div>
-                            <div class="usp__animate two">
-                                <img src="img/icon/2.png" alt="" title="" loading="lazy">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="card icon-orange select-usp" id="one">
-                                        Capitalize on low hanging fruit to identify a ballpark
-                                        <div class="card__title">Business</div>
-                                        <div>
-                                            <i class="fa fa-ellipsis-h"></i>
-                                            <div class="icon-flat">
-                                                <i class="flaticon flaticon-money"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card icon-red select-usp" id="two">
-                                        Capitalize on low hanging fruit to identify a ballpark
-                                        <div class="card__title">Product</div>
-                                        <div>
-                                            <i class="fa fa-ellipsis-h"></i>
-                                            <div class="icon-flat">
-                                                <i class="flaticon flaticon-analytics"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card icon-purple select-usp" id="three">
-                                        Capitalize on low hanging fruit to identify a ballpark
-                                        <div class="card__title">Corporate</div>
-                                        <div>
-                                            <i class="fa fa-ellipsis-h"></i>
-                                            <div class="icon-flat">
-                                                <i class="flaticon flaticon-growth"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card icon-blue select-usp" id="four">
-                                        Capitalize on low hanging fruit to identify a ballpark
-                                        <div class="card__title">Content</div>
-                                        <div>
-                                            <i class="fa fa-ellipsis-h"></i>
-                                            <div class="icon-flat">
-                                                <i class="flaticon flaticon-speech-bubbles"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/makanan.png" alt="">
                     </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Makanan</label>
+                    </div>                        
                 </div>
-               
-            </div>
-        </section>
-        <section class="video">
-            <div class="container" id="show-one">
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/Minuman.png" alt="">
+                    </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>minuman</label>
+                    </div>                        
+                </div>
+                <div class="col-3">
+                                     
+                </div>
                 
-                <div class="text-center position-relative" data-aos="zoom-in">
-                    <div class="help-bg">
-                        <img src="img/pattern.png" alt="">
+            </div>
+            <div class="row mb-3">
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/order.png" alt="">
                     </div>
-                    <h2>Course</h2>
-                    <p>Pilih course yang kamu suka</p>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Order</label>
+                    </div>                        
                 </div>
-                <!-- Latest video -->
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <div class="video__latest" data-aos="zoom-in">
-                            
-                            <div class="description">
-                                <div class="description__tag">Content</div>
-                                <div class="description__materi">Materi Content Digital Marketing di Era Milenial</div>
-                                <div class="my-1 float-right">
-                                    <a href="#">
-                                        <button class="btn btn-primary">Preview Course</button>
-                                    </a>
-                                </div>
-                            </div>
-                            <img src="img/hero/1.png" alt="">
-                        </div>
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/promotions.png" alt="">
                     </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Promo</label>
+                    </div>                        
                 </div>
-
-                <!-- all video -->
-                <div class="row position-relative">
-                    <div class="help-bg pesawat">
-                        <img src="img/plane.png" alt="">
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/grabfood.png" alt="">
                     </div>
-
-                    <div class="help-bg lampu">
-                        <img src="img/lampu.png" alt="">
-                    </div>
-
-                    <div class="col-md-10 offset-md-1">
-                        <div class="row">
-                            
-                            <div class="col-md-4" data-aos="zoom-in">
-                                <div class="card">
-                                    <div class="image">
-                                        <img src="img/hero/2.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="materi">Materi Content Digital Marketing di Era Milenial</div>
-                                        <div class="name">Nanang Supriyatna</div>
-                                        <div class="tag">Content</div>
-                                        <div>
-                                            <a href="#">
-                                                <div class="float-right"><button class="btn btn-link">Preview Course</button></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-        
-                            <div class="col-md-4" data-aos="zoom-in">
-                                <div class="card">
-                                    <div class="image">
-                                        <img src="img/hero/3.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="materi">Materi Content Digital Marketing di Era Milenial</div>
-                                        <div class="name">Nanang Supriyatna</div>
-                                        <div class="tag">Content</div>
-                                        <div>
-                                            <a href="#">
-                                                <div class="float-right"><button class="btn btn-link">Preview Course</button></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-        
-                            <div class="col-md-4" data-aos="zoom-in">
-                                <div class="card">
-                                    <div class="image">
-                                        <img src="img/hero/4.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="materi">Materi Content Digital Marketing di Era Milenial</div>
-                                        <div class="name">Nanang Supriyatna</div>
-                                        <div class="tag">Content</div>
-                                        <div>
-                                            <a href="#">
-                                                <div class="float-right"><button class="btn btn-link">Preview Course</button></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                            <div class="col-md-4" data-aos="zoom-in">
-                                <div class="card">
-                                    <div class="image">
-                                        <img src="img/hero/2.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="materi">Materi Content Digital Marketing di Era Milenial</div>
-                                        <div class="name">Nanang Supriyatna</div>
-                                        <div class="tag">Content</div>
-                                        <div>
-                                            <a href="#">
-                                                <div class="float-right"><button class="btn btn-link">Preview Course</button></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-        
-                            <div class="col-md-4" data-aos="zoom-in">
-                                <div class="card">
-                                    <div class="image">
-                                        <img src="img/hero/3.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="materi">Materi Content Digital Marketing di Era Milenial</div>
-                                        <div class="name">Nanang Supriyatna</div>
-                                        <div class="tag">Content</div>
-                                        <div>
-                                            <a href="#">
-                                                <div class="float-right"><button class="btn btn-link">Preview Course</button></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-        
-                            <div class="col-md-4" data-aos="zoom-in">
-                                <div class="card">
-                                    <div class="image">
-                                        <img src="img/hero/4.png" alt="">
-                                    </div>
-                                    <div class="content">
-                                        <div class="materi">Materi Content Digital Marketing di Era Milenial</div>
-                                        <div class="name">Nanang Supriyatna</div>
-                                        <div class="tag">Content</div>
-                                        <div>
-                                            <a href="#">
-                                                <div class="float-right"><button class="btn btn-link">Preview Course</button></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                          
-                        </div>
-                    </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Grab</label>
+                    </div>                        
                 </div>
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/gofood.png" alt="">
+                    </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Gofood</label>
+                    </div>                        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/maps.png" alt="">
+                    </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Lokasi</label>
+                    </div>                        
+                </div>
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/whatsapp.png" alt="">
+                    </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Whatsapp</label>
+                    </div>                        
+                </div>
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/instagram.png" alt="">
+                    </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Instagram</label>
+                    </div>                        
+                </div>
+                <div class="col-3">
+                    <div class="menu d-flex justify-content-center">
+                        <img src="img/icon/youtube.png" alt="">
+                    </div>
+                    <div class="menu d-flex justify-content-center">
+                        <label>Youtube</label>
+                    </div>                        
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("btn-darklight").addEventListener("click", fn_darklight);
+
+        function fn_darklight() {
+            var btndarklight = document.getElementById("btn-darklight");
+            if ( document.body.classList.contains("bg-light")){
+                document.body.classList.remove("bg-light");
+                document.body.classList.remove("text-dark");
+                document.body.classList.add("bg-dark");
+                document.body.classList.add("text-light");
+
+                btndarklight.classList.add("btn-light");
+                btndarklight.classList.add("text-dark");
+                btndarklight.classList.remove("btn-dark");
+                btndarklight.classList.remove("text-warning");    
+                btndarklight.innerHTML = "<i class='far fa-lightbulb text-warning'></i>";           
+            } else {
+                document.body.classList.add("bg-light");
+                document.body.classList.add("text-dark");
+                document.body.classList.remove("bg-dark");
+                document.body.classList.remove("text-light");
+
+                btndarklight.classList.remove("btn-light");
+                btndarklight.classList.remove("text-dark");
+                btndarklight.classList.add("btn-dark");
+                btndarklight.classList.add("text-light");
+                btndarklight.innerHTML = "<i class='far fa-moon'></i>";                 
+            }
+            
+            
+
+            
                
-
-                <!-- end all video -->
-            </div>
-
-            <div class="mx-auto text-center">
-                <button class="btn btn-primary">Load More</button>
-            </div>
-            
-            <!-- loading load more -->
-            <div id="loading" class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <span class="skeleton-box"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="skeleton-box"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="skeleton-box"></span>
-                    </div>
-                </div>
-            </div>
-            <!-- loading load more -->
-            
-        </section>
-
-        <!-- <div class="scroll-totop">
-            <i class="fa fa-angle-up" aria-hidden="true"></i>
-            <div>menu</div>
-        </div> -->
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <div class="clearfix">
-                            <div class="float-left">
-                                <div class="logo-detik">
-                                    <img src="img/detikcom.png" alt="" title="" loading="lazy">
-                                </div>
-                                <div class="copyright">&copy; 2022 detiknetwork All right reserved</div>
-                            </div>
-                            <div class="float-right">
-                                <div class="sosmed">
-                                    <div class="sosmed__icon">
-                                        <a href="https://www.facebook.com/detikcom" target="_blank">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                    </div>
-                                    <div class="sosmed__icon">
-                                        <a href="https://twitter.com/detikcom" target="_blank">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </div>
-                                    <div class="sosmed__icon">
-                                        <a href="https://instagram.com/detikcom/" target="_blank">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                    <div class="sosmed__icon">
-                                        <a href="https://www.linkedin.com/company/detik-com/" target="_blank">
-                                            <i class="fa fa-linkedin"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </main>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/app.js"></script>
-</body>
+            }
+    </script>
+  </body>
 </html>
