@@ -1,0 +1,89 @@
+/* #region global */
+
+body {
+    font-family: 'Poppins';font-size: 9pt;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.background {
+    background-image: url("bg.png");
+    background-blend-mode: color-dodge;
+}
+
+/* #endregion */
+
+/* #region index */
+
+.header_index {
+    top:0;
+    display: flex;
+    justify-content: end;
+    padding:10px
+}
+.btn-round {
+    border-radius: 25px;
+}
+.brandimg {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 1px solid #06060630;
+}
+.brandname {
+    font-size: 20px;
+    font-weight: 600;
+}
+.list {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding:10px;
+   
+}
+.menu_index>img {
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+   
+}
+.menu_index>label {
+    margin-top: 5px;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* #endregion */
+
+/* #region page */
+
+.header_page {
+    top:0;
+    display: flex;
+    justify-content: end;
+    padding:10px;
+    border-bottom: 1px solid #2125292e;
+}
+.title {
+    font-family: inherit;
+    font-size: 12pt;
+    font-weight: 600;
+}
+.content {
+    width: 100%;
+    height: 100vh;
+}
+.menu {
+    height: 15rem;
+}
+.daftarmenu {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+   
+}
+
+/* #endregion */

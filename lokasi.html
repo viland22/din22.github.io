@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='popup.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='style.css' rel='stylesheet'>
+    <title>Link menu</title>
+   
+  </head>
+  <body class="bg-light text-dark background">
+    <div class="header_page d-flex justify-content-between bg-white shadow">
+        <div>
+            <a href="index.html" class="text-dark mr-2" style="font-size: 17px;"><i class="fa fa-arrow-left"></i></a>
+        </div>
+        <div>
+            <label class="title text-dark mt-1">Lokasi</label>
+        </div>
+    </div>
+    <div class="container p-3">
+        <div class="">
+            <div class="d-flex justify-content-start mt-2">
+                <label class="brandname text-center">Cimanggoe Cafe</label>
+            </div>
+            <div class="d-flex justify-content-start">
+                <span>Jl. Cimanggu Besar No 13<br> Kota Bogor.</span>
+            </div>
+            <div class="d-flex justify-content-start mt-3">
+                <a href="https://goo.gl/maps/2YYBCNwDoBTWeqdY8" class="btn btn-sm btn-primary" style="font-size: 11px;"><i class="fa fa-location-dot"></i> Buka di Google Maps.</a>
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+    <script>
+   
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        let darkmode = sessionStorage.getItem("darkmode");
+        if (darkmode=="false"){
+            document.body.classList.add("bg-light");
+            document.body.classList.add("text-dark");
+            document.body.classList.remove("bg-dark");
+            document.body.classList.remove("text-light");
+        } else {
+            document.body.classList.remove("bg-light");
+            document.body.classList.remove("text-dark");
+            document.body.classList.add("bg-dark");
+            document.body.classList.add("text-light");
+        }
+    });
+
+    </script>
+  </body>
+</html>
