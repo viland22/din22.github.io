@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='popup.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='style.css' rel='stylesheet'>
+    <title>Link menu</title>
+   
+  </head>
+  <body class="bg-light text-dark background">
+    <div class="header_page d-flex justify-content-between bg-white shadow">
+        <div>
+            <a href="index.html" class="text-dark mr-2" style="font-size: 17px;"><i class="fa fa-arrow-left"></i></a>
+        </div>
+        <div>
+            <label class="title text-dark mt-1">Viewer</label>
+        </div>
+    </div>
+    <div class="container p-3">
+      <div class="card mb-2">
+        <div class="card-header fs-6 fw-bolder bg-light text-dark background">
+          Data - Jumlah Viewer Per Menu
+        </div>
+        <div class="card-body bg-light text-dark background">
+          
+          <div class="table-responsive">
+            <table class="table">
+             <thead class="fw-bolder">
+              <tr>
+                <td>Menu</td>
+                <td>View</td>
+              </tr>
+             </thead>
+             <tbody>
+             </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-2">
+        <div class="card-header fs-6 fw-bolder bg-light text-dark background">
+          Chart - Jumlah Viewer Per Menu
+        </div>
+        <div class="card-body bg-light text-dark background">
+          <div id="chart">
+          </div>
+        </div>
+      </div>
+    </div>
+   
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script>
+      var jumlah = 0;
+
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        darkmode();
+
+        var makanan=0;
+        var minuman=0;
+        var promo=0;
+        var order_online=0;
+        var shopeefood=0;
+        var grabfood=0;
+        var gofood=0;
+        var lokasi=0;
+        var whatsapp=0;
+        var instragram=0;
+        var youtube=0;
+        
+        makanan = readviewer("vw_makanan.txt");
+        minuman = readviewer("vw_minuman.txt");
+        promo = readviewer("vw_promo.txt");
+        order_online = readviewer("vw_order_online.txt");
+        shopeefood = readviewer("vw_shopeefood.txt");
+        grabfood = readviewer("vw_grabfood.txt");
+        gofood = readviewer("vw_gofood.txt");
+        lokasi = readviewer("vw_lokasi.txt");
+        whatsapp = readviewer("vw_whatsapp.txt");
+        instragram = readviewer("vw_instragram.txt");
+        youtube = readviewer("vw_youtube.txt");
+
+        var string="";
+        string =""+
+          "<tr><td>Menu Makanan</td><td>"+makanan+"x Dilihat</td></tr>"+
+          "<tr><td>Menu Minuman</td><td>"+minuman+"x Dilihat</td></tr>"+
+          "<tr><td>Menu Promosi</td><td>"+promo+"x Dilihat</td></tr>"+
+          "<tr><td>Menu order Online</td><td>"+order_online+"x Dilihat</td></tr>"+
+          "<tr><td>Menu ShopeFood</td><td>"+shopeefood+"x Dilihat</td></tr>"+
+          "<tr><td>Menu Grabfood</td><td>"+grabfood+"x Dilihat</td></tr>"+
+          "<tr><td>Menu Gofood</td><td>"+gofood+"x Dilihat</td></tr>"+
+          "<tr><td>Menu Lokasi</td><td>"+lokasi+"x Dilihat</td></tr>"+
+          "<tr><td>Menu Whatsapp</td><td>"+whatsapp+"x Dilihat</td></tr>"+
+          "<tr><td>Menu Instagram</td><td>"+instragram+"x Dilihat</td></tr>"+
+          "<tr><td>Menu Youtube</td><td>"+youtube+"x Dilihat</td></tr>";
+        $("tbody").html(string);
+
+        var data =[];
+        data = [makanan,minuman,promo,order_online,shopeefood,grabfood,gofood,lokasi,whatsapp,instragram,youtube];
+        openchart(data);
+      });
+
+      function readviewer(menu) {
+        var jumlah=0;
+        $.ajax({
+            url:"fn_read.php",  
+            async: false,
+            type: "post",   
+            dataType: 'json',
+            data: {menu: menu},
+            success:function(result){
+                jumlah=result;
+
+            },
+            error : function(result){
+              return 0;
+            }
+        });
+        return jumlah;
+      }
+      
+
+      function openchart(data){
+        var options = {
+          series: [{
+          //data: [25, 20, 50, 6, 8, 0, 2, 3, 5, 0, 12]
+          data: data
+        }],
+          chart: {
+          type: 'bar',
+          height: 380
+        },
+        plotOptions: {
+          bar: {
+            barHeight: '100%',
+            distributed: true,
+            horizontal: true,
+            dataLabels: {
+              position: 'bottom'
+            },
+          }
+        },
+        colors: ['#33b2df', '#546E7A', '#d4526e', 
+        '#13d8aa', '#A5978B', '#2b908f', '#f9a3a4', 
+        '#90ee7e', '#f48024', '#69d2e7', '#A5978B'
+        ],
+        dataLabels: {
+          enabled: true,
+          textAnchor: 'start',
+          style: {
+            colors: ['#212529']
+          },
+          formatter: function (val, opt) {
+            return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val
+          },
+          offsetX: 0,
+          dropShadow: {
+            enabled: true
+          }
+        },
+        stroke: {
+          width: 1,
+          colors: ['#f8f9fa']
+        },
+        xaxis: {
+          categories: ['Menu Makanan', 'Menu Minuman', 'Menu Promosi', 
+          'Menu order Online', 'Menu ShopeFood', 'Menu Grabfood', 'Menu GoFood',
+          'Menu Lokasi', 'Menu Whatsapp', 'Menu Instagram', 'Menu Youtube'
+          ],
+        },
+        yaxis: {
+          labels: {
+            show: false
+          }
+        },
+        // title: {
+        //     text: 'Custom DataLabels',
+        //     align: 'center',
+        //     floating: true
+        // },
+        // subtitle: {
+        //     text: 'Category Names as DataLabels inside bars',
+        //     align: 'center',
+        // },
+        tooltip: {
+          theme: 'dark',
+          x: {
+            show: false
+          },
+          y: {
+            title: {
+              formatter: function () {
+                return ''
+              }
+            }
+          }
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      }
+    </script>
+  </body>
+</html>

@@ -85,5 +85,14 @@ a {
     border-radius: 10px;
    
 }
+#chart {
+    max-width: 650px;
+    /* margin: 35px auto; */
+}
+/* #endregion */
 
+/* #region override */
+.container {
+    max-width: 540px !important;
+}
 /* #endregion */
