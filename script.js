@@ -17,7 +17,7 @@ function readonly(menu) {
     $.ajax({
         url:"fn_read.php",  
         async: false,
-        type: "post",   
+        type: "GET",   
         dataType: 'json',
         data: {menu: menu},
         success:function(result){
@@ -31,7 +31,7 @@ function readonly(menu) {
     $.ajax({
         url:"fn_read.php",  
         async: false,
-        type: "post",   
+        type: "GET",   
         dataType: 'json',
         data: {menu: menu},
         success:function(result){
@@ -57,7 +57,7 @@ function create(menu,jumlah) {
     $.ajax({
         url:"fn_write.php", 
         async: false,
-        type: "post",   
+        type: "GET",   
         dataType: 'json',
         data: {menu: menu, jumlah:addjumlah},
         success:function(result){

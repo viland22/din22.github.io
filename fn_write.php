@@ -1,6 +1,6 @@
 <?php
-$menu = $_POST['menu'];
-$jumlah = $_POST['jumlah'];
+$menu = $_GET['menu'];
+$jumlah = $_GET['jumlah'];
 $myfile = fopen($menu, "w") or die("Unable to open file!");
 //$txt = "20\n";
 $txt =$jumlah;
