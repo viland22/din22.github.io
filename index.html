@@ -18,7 +18,7 @@
    
     <div class="container">
         <div class="header_index">
-            <button class="btn btn-sm btn-round btn-dark text-light shadow-sm mr-2" id="btn-chart" style="height: 30px; width: 30px;margin-right: 5px;"><i class="fa fa-chart-column"></i></button>
+            <button class="btn btn-sm btn-round btn-dark text-light shadow-sm mr-2" id="btn-chart" onclick="window.location.href='viewer.html'" style="height: 30px; width: 30px;margin-right: 5px;"><i class="fa fa-chart-column"></i></button>
             <button class="btn btn-sm btn-round btn-dark text-light shadow-sm" id="btn-darklight" style="height: 30px; width: 30px;"><i class="far fa-moon"></i></button>
         </div>
         <div class="">
@@ -32,124 +32,128 @@
                 <span>Jl. Cimanggu Besar No 13, Kota Bogor.</span>
             </div>
         </div>
-        <div class="list">
-            <div class="row mb-3">
-                <div class="col-3">
-                    <a href="makanan.html">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="makanan.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Makanan</label>
-                        </div>      
-                    </a>                  
+        <div class="list mb-2">
+            <div class="container">
+                
+                <div class="row mb-3">
+                    <div class="col-3">
+                        <a href="makanan.html">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="makanan.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Makanan</label>
+                            </div>      
+                        </a>                  
+                    </div>
+                    <div class="col-3">
+                        <a href="minuman.html">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="minuman.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Minuman</label>
+                            </div>  
+                        </a>                      
+                    </div>
+                    <div class="col-3">
+                        <a href="promo.html">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="promotions.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Promo</label>
+                            </div>   
+                        </a>                      
+                    </div>
+                    <div class="col-3">
+                                        
+                    </div>
                 </div>
-                <div class="col-3">
-                    <a href="minuman.html">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="minuman.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Minuman</label>
-                        </div>  
-                    </a>                      
+                <div class="row mb-3">
+                    <div class="col-3">
+                        <a href="#" onclick="orderonline()">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="order.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Order Online</label>
+                            </div>    
+                        </a>                      
+                    </div>
+                    <div class="col-3">
+                        <a href="#" onclick="shopeefood()">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="shopeefood.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Shopee Food</label>
+                            </div>   
+                        </a>                     
+                    </div>
+                    <div class="col-3">
+                        <a href="#" onclick="grabfood()">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="grabfood.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Grab Food</label>
+                            </div>     
+                        </a>                   
+                    </div>
+                    <div class="col-3">
+                        <a href="#" onclick="gofood()">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="gofood.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Gofood</label>
+                            </div>    
+                        </a>                    
+                    </div>
                 </div>
-                <div class="col-3">
-                    <a href="promo.html">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="promotions.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Promo</label>
-                        </div>   
-                    </a>                      
-                </div>
-                <div class="col-3">
-                                     
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-3">
-                    <a href="https://api.whatsapp.com/send/?phone=628979334861&text=Hai+kak,+Bisa+order+makanan+dan+minuman+nya?&type=phone_number&app_absent=0">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="order.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Order Online</label>
-                        </div>    
-                    </a>                      
-                </div>
-                <div class="col-3">
-                    <a href="https://shopee.co.id/universal-link/now-food/shop/1450227?deep_and_deferred=1&shareChannel=copy_link">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="shopeefood.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Shopee Food</label>
-                        </div>   
-                    </a>                     
-                </div>
-                <div class="col-3">
-                    <a href="https://food.grab.com/id/id/restaurant/kfc-taman-topi-square-delivery/IDGFSTI0000098o">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="grabfood.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Grab Food</label>
-                        </div>     
-                    </a>                   
-                </div>
-                <div class="col-3">
-                    <a href="https://gofood.link/u/Oeng">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="gofood.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Gofood</label>
-                        </div>    
-                    </a>                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <a href="lokasi.html">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="maps.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Lokasi</label>
-                        </div>    
-                    </a>                    
-                </div>
-                <div class="col-3">
-                    <a href="https://api.whatsapp.com/send/?phone=628979334861&text=Hai+Cimanggoe+Cafe&type=phone_number&app_absent=0">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="whatsapp.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Whatsapp</label>
-                        </div>            
-                    </a>            
-                </div>
-                <div class="col-3">
-                    <a href="https://www.instagram.com/kfcindonesia/?hl=id">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="instagram.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Instagram</label>
-                        </div>          
-                    </a>              
-                </div>
-                <div class="col-3">
-                    <a href="https://www.youtube.com/user/kfcindonesia">
-                        <div class="menu_index d-flex justify-content-center">
-                            <img src="youtube.png" alt="">
-                        </div>
-                        <div class="menu_index d-flex justify-content-center">
-                            <label>Youtube</label>
-                        </div>      
-                    </a>                  
+                <div class="row">
+                    <div class="col-3">
+                        <a href="lokasi.html">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="maps.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Lokasi</label>
+                            </div>    
+                        </a>                    
+                    </div>
+                    <div class="col-3">
+                        <a href="#" onclick="whatsapp()">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="whatsapp.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Whatsapp</label>
+                            </div>            
+                        </a>            
+                    </div>
+                    <div class="col-3">
+                        <a href="#" onclick="instragram()">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="instagram.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Instagram</label>
+                            </div>          
+                        </a>              
+                    </div>
+                    <div class="col-3">
+                        <a href="#" onclick="youtube()">
+                            <div class="menu_index d-flex justify-content-center">
+                                <img src="youtube.png" alt="">
+                            </div>
+                            <div class="menu_index d-flex justify-content-center">
+                                <label>Youtube</label>
+                            </div>      
+                        </a>                  
+                    </div>
+                    
                 </div>
                 
             </div>
@@ -157,6 +161,8 @@
     </div>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <script>
 
     document.addEventListener("DOMContentLoaded", function(event) { 
@@ -236,7 +242,45 @@
 
             
                
-            }
+        }
+
+        function orderonline(){
+            readwrite("vw_order_online.txt");
+            window.location.href = "https://api.whatsapp.com/send/?phone=628979334861&text=Hai+kak,+Bisa+order+makanan+dan+minuman+nya?&type=phone_number&app_absent=0";
+
+        }
+
+        function shopeefood(){
+            readwrite("vw_shopeefood.txt");
+            window.location.href = "https://shopee.co.id/universal-link/now-food/shop/1450227?deep_and_deferred=1&shareChannel=copy_link";
+
+        }
+        function grabfood(){
+            readwrite("vw_grabfood.txt");
+            window.location.href = "https://food.grab.com/id/id/restaurant/kfc-taman-topi-square-delivery/IDGFSTI0000098o";
+
+        }
+        function gofood(){
+            readwrite("vw_gofood.txt");
+            window.location.href = "https://gofood.link/u/Oeng";
+
+        }
+        function whatsapp(){
+            readwrite("vw_whatsapp.txt");
+            window.location.href = "https://api.whatsapp.com/send/?phone=628979334861&text=Hai+Cimanggoe+Cafe&type=phone_number&app_absent=0";
+
+        }
+        function instragram(){
+            readwrite("vw_instragram.txt");
+            window.location.href = "https://www.instagram.com/kfcindonesia/?hl=id";
+
+        }
+        function youtube(){
+            readwrite("vw_youtube.txt");
+            window.location.href = "https://www.youtube.com/user/kfcindonesia";
+
+        }
+      
     </script>
   </body>
 </html>
