@@ -5,4 +5,5 @@ $myfile = fopen($menu, "r") or die("Unable to open file!");
 $result =  fgets($myfile);
 fclose($myfile);
 echo $result;
+exit;
 ?>
